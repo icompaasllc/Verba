@@ -39,14 +39,14 @@ class VoyageAIEmbedder(Embedding):
             self.config["API Key"] = InputConfig(
                 type="password",
                 value="",
-                description="OpenAI API Key (or set OPENAI_API_KEY env var)",
+                description="Voyage API Key (or set VOYAGE_API_KEY env var)",
                 values=[],
             )
         if os.getenv("VOYAGE_BASE_URL") is None:
             self.config["URL"] = InputConfig(
                 type="text",
                 value=base_url,
-                description="OpenAI API Base URL (if different from default)",
+                description="Voyage API Base URL (if different from default)",
                 values=[],
             )
 
